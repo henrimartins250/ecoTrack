@@ -73,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   if(value == null || value.isEmpty){
                     return "Digite seu E-mail";
                   }
-                  if(!value.contains("@") || value.contains(".")){
+                  if(!value.contains("@") || !value.contains(".")){
                     return "E-mail Inválido";
                   }
                   return null;
