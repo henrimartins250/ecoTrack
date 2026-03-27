@@ -3,6 +3,11 @@ class AuthService {
   final String senhaCadastrada = "123456";
 
   String? login(String email, String senha){
+
+    if (email.isEmpty || senha.isEmpty) {
+      return "Preencha usuário e senha";
+    }
+    
     if(email != usuarioCadastrado){
       return "Usuário não Cadastrado";
     }
